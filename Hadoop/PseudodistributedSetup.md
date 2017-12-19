@@ -69,7 +69,7 @@ Hadoop控制脚本依赖于SSH来执行针对整个集群的操作。为了允�
     [root@taxuezju opt]# chown -R hadoop:hadoop hadoop-2.9.0
     ```
 - `/etc/profile` 中添加一下环境变量，便于直接在终端执行hadoop的一些脚本
-    ```
+    ``` bash
     #Hadoop environment
     export HADOOP_HOME=/opt/hadoop-2.9.0
     export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin
@@ -77,7 +77,7 @@ Hadoop控制脚本依赖于SSH来执行针对整个集群的操作。为了允�
 #### 5. 配置Hadoop
 这里先配置伪分布式，配置参照《Hadoop: The Definitive Guide》
 - 配置`core-site.xml`
-    ```
+    ``` xml
     <configuration>
       <property>
         <name>fs.defaultFS</name>
@@ -86,7 +86,7 @@ Hadoop控制脚本依赖于SSH来执行针对整个集群的操作。为了允�
     </configuration>
     ```
 - 配置`hdfs-site.xml`
-    ```
+    ``` xml
     <configuration>
       <property>
         <name>dfs.replication</name>
@@ -95,7 +95,7 @@ Hadoop控制脚本依赖于SSH来执行针对整个集群的操作。为了允�
     </configuration>
     ```
 - 配置`mapred-site.xml`
-    ```
+    ``` xml
     <configuration>
       <property>
         <name>mapreduce.framework.name</name>
@@ -104,7 +104,7 @@ Hadoop控制脚本依赖于SSH来执行针对整个集群的操作。为了允�
     </configuration>
     ```
 - 配置`yarn-site.xml`
-    ```
+    ``` xml
     <configuration>
       <property>
         <name>yarn.resourcemanager.hostname</name>
