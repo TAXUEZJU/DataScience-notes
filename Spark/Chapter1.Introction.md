@@ -6,7 +6,7 @@
         - Run programs up to 100x faster than Hadoop MapReduce in memory, or 10x faster on disk
     - **Generality**
         - Cover a wide range of workloads
-            batch applications, interactive algorithms, interactive queries, streaming
+            batch applications, iterative algorithms, interactive queries, streaming
         - Easy and inexpensive to combine different processing types
         - Reduce the management burden of maintaining separate tools
 - Highly accessible, simple APIs in Python, Java, Scala, and SQL, and rich built-in libraries
@@ -31,7 +31,7 @@
 ![](./images/Sparkstack.png)
 - **Spark Core**
     - Basic functionality of Spark
-        - Task scheduling, memory management, fault recovery, interacting with storage systems, and more
+        - **Task scheduling**, **memory management**, **fault recovery**, **interacting with storage systems**, and more
     - Home to the API that defines resilient distributed datasets(RDDs), which are Spark's main programming abstraction
         - RDDs: a collection of items distributed across many compute nodes that can be manipulated in parallel
     - Provide many APIs for building and manipulating these collections
@@ -50,7 +50,7 @@
         - Manipulate data stored in memory, on disk, or arriving in real time
     - Designed to provide fault tolerance, throughput, and scalability
 - **MLlib**
-    - A library containing common machine learning functionality, called MLlib, in spark.mllib package
+    - A library containing common machine learning functionality, called MLlib, in `spark.mllib` package
     - Multiple types of machine learning algorithms
         - Classification
         - Regression
@@ -64,14 +64,14 @@
     - Extends the Spark RDD API, allowing us to create a directed graph with arbitrary properties attached to each vertex and edge
     - GraphX also provides various operators for manipulating graphs (e.g., subgraph and mapVertices) and a library of common graph algorithms (e.g., PageRank and triangle counting)
 - **Cluster Managers**
-    - Spark can run over a variety of cluster managers, including Hadoop YARN, Apache Mesos, and a simple cluster manager included in Spark itself called the Standalone Scheduler
+    - Spark can run over a variety of cluster managers, including **Hadoop YARN**, **Apache Mesos**, and a simple cluster manager included in Spark itself called the **Standalone Scheduler**
 ### Who Uses Spark, and for what?
 There are two groups it targets: data scientists and engineers. We can roughly classify use cases into two categories, *data science* and *data applications* .
 #### Data Science tasks
-- Data Science centers on analyzing data
+- Data Science centers on analyzing and modeling data
     - Transform data into formats that can be analyzed for insights (sometimes referred to as data wrangling)
     - Use skills to analyze data with the goal of answering a question or discovering insights
-- Spark supports the different tasks of data science with a number components
+- Spark supports the different tasks of data science with a number of components
     - The Spark shell makes it easy to do interactive data analysis using Python or Scala
     - Spark SQL also has a separate SQL shell that can be used to do data exploration
     - Machine learning and data analysis is supported through the MLLib libraries
@@ -80,7 +80,7 @@ There are two groups it targets: data scientists and engineers. We can roughly c
 - Engineers use their engineering skills to design and build software systems that implement a business use case
 - Spark provides a simple way to parallelize these applications across clusters, and hides the complexity of distributed systems programming, network communication, and fault tolerance
 ### Brief History
-- park started in 2009 as a research project in the UC Berkeley RAD Lab, later to become the AMPLab. The researchers in the lab had previously been working on Hadoop MapReduce, and observed that MapReduce was inefficient for iterative and interactive computing jobs
+- Spark started in 2009 as a research project in the UC Berkeley RAD Lab, later to become the AMPLab. The researchers in the lab had previously been working on Hadoop MapReduce, and observed that MapReduce was inefficient for iterative and interactive computing jobs
 - Spark was first open sourced in March 2010, and was transferred to the Apache Software Foundation in June 2013
 ### Storage Layers for Spark
 - Spark can create distributed datasets from any file
