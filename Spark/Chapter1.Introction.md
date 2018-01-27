@@ -2,7 +2,7 @@
 #### What Is Apache Spark
 - A cluster computing platform: *fast* and *general-purpose*
     - **Speed**
-        - Extend the popular MapReduce model to efficiently support types of computations, including interactive queries and stream processing;
+        - Extend the popular MapReduce model to efficiently support types of computations, including interactive queries and stream processing
         - Run programs up to 100x faster than Hadoop MapReduce in memory, or 10x faster on disk
     - **Generality**
         - Cover a wide range of workloads
